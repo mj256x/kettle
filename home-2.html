@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop, page 2 | Kettle</title>
+  <meta name="description" content="Kettle serves handcrafted hot and iced coffee drinks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <a class="visually-hidden-focusable position-absolute p-2 bg-white" href="#main">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand d-flex align-items-center" href="index.html"><span class="brand-mark"><i
+            class="bi bi-cup-hot-fill"></i></span>Kettle</a>
+      <div class="d-flex align-items-center gap-2 order-lg-last">
+        <a class="btn btn-outline-primary cart-btn" href="cart.html" aria-label="Cart">
+          <i class="bi bi-bag"></i><span class="cart-badge">4</span>
+        </a>
+        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#appNav"
+          aria-controls="appNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="appNav">
+        <ul class="navbar-nav me-lg-3 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="home.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="hot-coffee.html">Hot Coffee</a></li>
+          <li class="nav-item"><a class="nav-link" href="iced-coffee.html">Iced Coffee</a></li>
+        </ul>
+        <form class="ms-lg-auto me-lg-3 mb-2 mb-lg-0" role="search" action="home.html" method="get">
+          <div class="input-group nav-search">
+            <input type="search" class="form-control" name="q" placeholder="Search drinks" aria-label="Search drinks">
+            <button class="btn btn-primary" type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="py-4 py-lg-5">
+    <div class="container">
+
+      <!-- Welcome banner -->
+      <section class="shop-banner mb-4">
+        <div class="disc" aria-hidden="true"></div>
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="mb-2">Ready to brew?</h1>
+            <p class="mb-3 fs-5" style="opacity:.85">Explore our handcrafted hot and iced coffee drinks. Free shipping
+              on orders over $50.
+            </p>
+            <a class="btn btn-accent" href="iced-coffee.html">Shop iced coffee</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category pills -->
+      <div class="cat-pills mb-4" role="group" aria-label="Product categories">
+        <a class="pill active" href="home.html" aria-current="page">All</a>
+        <a class="pill" href="hot-coffee.html">Hot Coffee</a>
+        <a class="pill" href="iced-coffee.html">Iced Coffee</a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Filters (offcanvas on small screens) -->
+        <aside class="col-lg-3">
+          <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="filters" aria-labelledby="filtersLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="filtersLabel">Filters</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#filters"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-block p-3 p-lg-0">
+              <form class="filter-card" action="home.html" method="get">
+                <h6 class="mb-3">Price</h6>
+                <div class="d-flex justify-content-between small text-muted"><span>$0</span><span>Up to $10</span></div>
+                <input type="range" class="form-range mb-4" name="price" min="0" max="10" step="1" value="10"
+                  aria-label="Maximum price">
+
+                <h6 class="mb-3">Rating</h6>
+                <div class="form-check mb-1"><input class="form-check-input" type="radio" name="rating" id="rateAll"
+                    value="0" checked><label class="form-check-label" for="rateAll">All ratings</label></div>
+                <div class="form-check mb-1"><input class="form-check-input" type="radio" name="rating" id="rate4"
+                    value="4"><label class="form-check-label" for="rate4"><span class="stars"><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> &amp; up</label></div>
+                <div class="form-check mb-4"><input class="form-check-input" type="radio" name="rating" id="rate45"
+                    value="4.5"><label class="form-check-label" for="rate45"><span class="stars"><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> &amp; up</label></div>
+
+                <h6 class="mb-3">Availability</h6>
+                <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="onSale"><label
+                    class="form-check-label" for="onSale">On sale</label></div>
+                <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="inStock" checked><label
+                    class="form-check-label" for="inStock">In stock</label></div>
+
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary">Apply filters</button>
+                  <button type="reset" class="btn btn-outline-primary">Clear all</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products -->
+        <section class="col-lg-9" aria-labelledby="resultsTitle">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div class="d-flex align-items-center gap-3">
+              <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#filters" aria-controls="filters"><i class="bi bi-funnel me-1"></i>Filters</button>
+              <h2 class="h5 mb-0" id="resultsTitle">All products <span class="text-muted fw-normal">(12)</span></h2>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <label for="sortSelect" class="text-muted small text-nowrap">Sort by</label>
+              <select class="form-select form-select-sm" id="sortSelect">
+                <option>Featured</option>
+                <option>Price: low to high</option>
+                <option>Price: high to low</option>
+                <option>Top rated</option>
+                <option>Name A to Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-6 col-md-4">
+              <article class="product-card">
+                <a href="product-espresso.html" class="product-art" style="--art:#DCE7E0" aria-label="View Espresso">
+                  <i class="bi bi-cup-hot" aria-hidden="true"></i>
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                  <p class="product-cat">Hot Coffee</p>
+                  <h3 class="product-name"><a href="product-espresso.html">Espresso</a></h3>
+                  <div class="d-flex align-items-center gap-2 my-2">
+                    <span class="stars" aria-hidden="true"><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-half"></i></span>
+                    <span class="rating-count">4.8 (143)</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                    <div><span class="price">$3.50</span></div>
+                    <a class="btn-add" href="product-espresso.html" aria-label="View Espresso"><i
+                        class="bi bi-bag-plus"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-md-4">
+              <article class="product-card">
+                <a href="product-iced-coffee.html" class="product-art" style="--art:#F8E7A6"
+                  aria-label="View Iced Coffee">
+                  <i class="bi bi-snow2" aria-hidden="true"></i>
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                  <p class="product-cat">Iced Coffee</p>
+                  <h3 class="product-name"><a href="product-iced-coffee.html">Iced Coffee</a></h3>
+                  <div class="d-flex align-items-center gap-2 my-2">
+                    <span class="stars" aria-hidden="true"><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-half"></i></span>
+                    <span class="rating-count">4.6 (91)</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                    <div><span class="price">$4.25</span></div>
+                    <a class="btn-add" href="product-iced-coffee.html" aria-label="View Iced Coffee"><i
+                        class="bi bi-bag-plus"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-md-4">
+              <article class="product-card">
+                <a href="product-macchiato.html" class="product-art" style="--art:#F0CFC6" aria-label="View Macchiato">
+                  <i class="bi bi-cup" aria-hidden="true"></i>
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                  <p class="product-cat">Hot Coffee</p>
+                  <h3 class="product-name"><a href="product-macchiato.html">Macchiato</a></h3>
+                  <div class="d-flex align-items-center gap-2 my-2">
+                    <span class="stars" aria-hidden="true"><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-half"></i></span>
+                    <span class="rating-count">4.5 (58)</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                    <div><span class="price">$4.25</span></div>
+                    <a class="btn-add" href="product-macchiato.html" aria-label="View Macchiato"><i
+                        class="bi bi-bag-plus"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-md-4">
+              <article class="product-card">
+                <a href="product-iced-mocha-latte.html" class="product-art" style="--art:#DCE7E0"
+                  aria-label="View Iced Mocha Latte">
+                  <span class="tag tag-sale">Sale</span><i class="bi bi-cup-straw" aria-hidden="true"></i>
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                  <p class="product-cat">Iced Coffee</p>
+                  <h3 class="product-name"><a href="product-iced-mocha-latte.html">Iced Mocha Latte</a></h3>
+                  <div class="d-flex align-items-center gap-2 my-2">
+                    <span class="stars" aria-hidden="true"><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-half"></i></span>
+                    <span class="rating-count">4.7 (77)</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                    <div><span class="price">$5.25</span><span class="price-old">$5.75</span></div>
+                    <a class="btn-add" href="product-iced-mocha-latte.html" aria-label="View Iced Mocha Latte"><i
+                        class="bi bi-bag-plus"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-md-4">
+              <article class="product-card">
+                <a href="product-caramel-latte.html" class="product-art" style="--art:#F8E7A6"
+                  aria-label="View Caramel Latte">
+                  <i class="bi bi-cup-hot-fill" aria-hidden="true"></i>
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                  <p class="product-cat">Hot Coffee</p>
+                  <h3 class="product-name"><a href="product-caramel-latte.html">Caramel Latte</a></h3>
+                  <div class="d-flex align-items-center gap-2 my-2">
+                    <span class="stars" aria-hidden="true"><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-half"></i></span>
+                    <span class="rating-count">4.8 (119)</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                    <div><span class="price">$5.25</span></div>
+                    <a class="btn-add" href="product-caramel-latte.html" aria-label="View Caramel Latte"><i
+                        class="bi bi-bag-plus"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-6 col-md-4">
+              <article class="product-card">
+                <a href="product-nitro.html" class="product-art" style="--art:#F0CFC6" aria-label="View Nitro">
+                  <i class="bi bi-droplet-half" aria-hidden="true"></i>
+                </a>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                  <p class="product-cat">Iced Coffee</p>
+                  <h3 class="product-name"><a href="product-nitro.html">Nitro</a></h3>
+                  <div class="d-flex align-items-center gap-2 my-2">
+                    <span class="stars" aria-hidden="true"><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-half"></i></span>
+                    <span class="rating-count">4.9 (53)</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                    <div><span class="price">$6.00</span></div>
+                    <a class="btn-add" href="product-nitro.html" aria-label="View Nitro"><i
+                        class="bi bi-bag-plus"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav class="mt-5" aria-label="Product pages">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="home.html">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="home.html">1</a></li>
+              <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
+              <li class="page-item disabled"><span class="page-link">Next</span></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer pt-5 pb-4 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="brand d-flex align-items-center mb-3" href="index.html"><span class="brand-mark"><i
+                class="bi bi-cup-hot-fill"></i></span>Kettle</a>
+          <p class="mb-0" style="max-width:22rem">Handcrafted hot and iced coffee, made fresh and brought to your door.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="mb-3">Shop</h6>
+          <ul class="list-unstyled d-grid gap-2 mb-0">
+            <li><a href="home.html">All products</a></li>
+            <li><a href="hot-coffee.html">Hot Coffee</a></li>
+            <li><a href="iced-coffee.html">Iced Coffee</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="mb-3">Help</h6>
+          <ul class="list-unstyled d-grid gap-2 mb-0">
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="mb-3">Get brew tips and new drinks</h6>
+          <form class="input-group" action="#" method="get">
+            <input type="email" class="form-control" placeholder="Your email" aria-label="Email for newsletter"
+              required>
+            <button class="btn btn-accent" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="d-flex flex-column flex-sm-row justify-content-between gap-2 small">
+        <span>&copy; 2026 Kettle. All rights reserved.</span>
+        <span>Built with HTML and Bootstrap</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+
+</html>
